@@ -57,4 +57,7 @@ public class FocusSession {
 
     @Column(name = "is_completed", nullable = false)
     private Boolean isCompleted;
+
+    @Column(name = "is_notification_sent", nullable = false)
+    private Boolean isNotificationSent;
 }
