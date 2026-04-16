@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wf-bg-1: #f4fde8;
+  --wf-bg-2: #d9f8cf;
+  --wf-bg-3: #ebfff1;
+  --wf-text: #0b3b2e;
+  --wf-font-heading: 'Baloo 2', cursive;
+  --wf-font-body: 'Nunito', 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--wf-text);
+  font-family: var(--wf-font-body);
+  background:
+    radial-gradient(circle at 15% 15%, rgba(132, 204, 22, 0.22), transparent 36%),
+    radial-gradient(circle at 82% 10%, rgba(16, 185, 129, 0.2), transparent 32%),
+    radial-gradient(circle at 70% 85%, rgba(163, 230, 53, 0.16), transparent 34%),
+    linear-gradient(145deg, var(--wf-bg-1), var(--wf-bg-2) 55%, var(--wf-bg-3));
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--wf-font-heading);
+}
+
+.nature-bg {
+  position: relative;
+}
+
+.nature-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(125deg, rgba(34, 197, 94, 0.08) 1px, transparent 1px),
+    linear-gradient(35deg, rgba(132, 204, 22, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px, 54px 54px;
+  mix-blend-mode: soft-light;
+}
